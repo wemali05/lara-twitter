@@ -1929,6 +1929,9 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
+    axios.get('/posts').then(function (resp) {
+      _this.posts = resp.data;
+    });
     _event_js__WEBPACK_IMPORTED_MODULE_0__["default"].$on('added_tweet', function (post) {
       _this.posts.unshift(post);
     });
