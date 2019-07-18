@@ -37,7 +37,18 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    protected $appends = ['profileLink'];
+
     public function posts(){
         return $this->hasMany(Post::class);
+    }
+
+    public function getRouteKeyName(){
+        return 'name';
+    }
+
+    public function getProfileLinkAttribute()
+    {
+        return route('user.show', $this);
     }
 }

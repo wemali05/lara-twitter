@@ -37317,7 +37317,7 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "media-body" }, [
             _c("div", { staticClass: "mt-3" }, [
-              _c("a", { attrs: { href: "#" } }, [
+              _c("a", { attrs: { href: post.user.profileLink } }, [
                 _vm._v(
                   "\n                  " +
                     _vm._s(post.user.name) +
